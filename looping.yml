@@ -1,0 +1,6 @@
+---
+  - name: "{{ item }}"
+    hosts: localhost
+    loop:
+     - testuser1
+     - testuser2

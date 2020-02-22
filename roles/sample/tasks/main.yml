@@ -1,0 +1,1 @@
+- debug: msg="{{java_version}}"
