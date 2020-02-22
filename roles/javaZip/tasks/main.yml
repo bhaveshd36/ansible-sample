@@ -1,19 +1,15 @@
----
-- hosts: localhost
-  tasks:
-
-    - name: Get Java tarball
+- name: Get Java tarball
       get_url:
         url: https://download.java.net/java/GA/jdk10/10.0.1/fb4372174a714e6b8c52526dc134031e/10/openjdk-10.0.1_linux-x64_bin.tar.gz
         dest: /home/insignia/Documents/bhavesh-work/open-jdk10.tar.gz
 
-    - name: make java 10 directory
+- name: make java 10 directory
       file:
-        path: /home/insignia/Documents/JAVA/java10
+        path: /home/insignia/Documents/bhavesh-work/AnsibleBackup/java10
         state: directory
 
-    - name: unpack tarball
+- name: unpack tarball
       unarchive:
-        dest: /home/insignia/Documents/JAVA/java10
+        dest: /home/insignia/Documents/bhavesh-work/AnsibleBackup/java10
         src: /home/insignia/Documents/bhavesh-work/open-jdk10.tar.gz
         remote_src: yes
