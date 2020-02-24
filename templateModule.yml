@@ -1,7 +1,7 @@
 - hosts: localhost
   vars:
-    variable_to_be_replaced: 'HELLO'
-    inline_variable: 'hello'
+    varOne: 'HELLO'
+    varTwo: 'hello'
   tasks:
     - name: Ansible Template Example
       template:
