@@ -1,0 +1,11 @@
+- name: Check User Exists
+  user:
+    name: "{{ user.username }}"
+    comment: "{{ user.name }}"
+    state: present
+  become: true
+  loop: "{{ users }}"
+  loop_control:
+    loop_var: user
+
+- name: Create File for each user

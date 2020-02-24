@@ -1,0 +1,21 @@
+- name: Main Role
+  debug: msg="{{ MAIN_ROLE }}"
+
+- name: TASK 1.
+  include_tasks: task1.yml
+  loop: "{{ my_array }}"  
+  with_items: my_array
+  vars:
+    xyz: Value of XYZ
+    my_array:
+       - 1
+       - 2
+       - 3
+   
+
+- name: TASK 2.
+  include_tasks: task2.yml
+
+- name: TASK 3.
+  include_tasks: task3.yml
+

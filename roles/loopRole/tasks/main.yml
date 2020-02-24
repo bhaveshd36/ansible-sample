@@ -1,6 +1,15 @@
-- debug: 
-	msg: "{{items}}"
+- name : Looping
+  debug: msg="{{ item }}"
   with_items:
-  	- "Hello World1"
-  	- "Hello World2"
-  	- "Hello World3"
+    - Hello1
+    - Hello2
+    - Hello3
+    - hello4
+
+- name : Creating Multiple Directories
+  command: mkdir /tmp/"{{ item }}"
+  with_items:
+    - bkddir1
+    - bkddir2
+    - bkddir3
+    - bkddir4

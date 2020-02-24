@@ -1,0 +1,7 @@
+  - name: Uninstall Java
+    become: yes
+    apt:
+      name: "{{ item }}"
+      state: absent
+    with_items:
+     - openjdk-8-jdk

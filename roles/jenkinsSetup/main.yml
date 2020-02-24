@@ -1,0 +1,21 @@
+- name: Add an Apt signing key, will not download if present
+  apt_key:
+    url: https://pkg.jenkins.io/debian/jenkins-ci.org.key
+    state: present
+
+- name: Add Jenkins apt repository.
+  apt_repository:
+    repo: "http://pkg.jenkins.io/debian-stable"
+    state: present
+    update_cache: true
+
+- name: Install Jenkins.
+  apt:
+    name: jenkins
+    state: present
+
+- name: Ensure Jenkins is installed.
+  apt:
+    name: jenkins
+    state: "{{ jenkins_package_state }}"
+  notify: configure default users

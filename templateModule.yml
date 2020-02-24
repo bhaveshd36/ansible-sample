@@ -1,0 +1,9 @@
+- hosts: localhost
+  vars:
+    variable_to_be_replaced: 'HELLO'
+    inline_variable: 'hello'
+  tasks:
+    - name: Ansible Template Example
+      template:
+        src: hello_world.j2
+        dest: /home/insignia/Documents/bhavesh-work/ansible-example/hello_world.txt

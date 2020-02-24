@@ -1,0 +1,2 @@
+- name: Task 3
+  debug: msg="{{ task3 }}"
