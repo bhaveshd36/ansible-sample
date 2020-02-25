@@ -6,4 +6,4 @@
     - name: Ansible Template Example
       template:
         src: hello_world.j2
-        dest: /home/insignia/Documents/bhavesh-work/ansible-example/hello_world.txt
+        dest: /home/insignia/Documents/bhavesh-work/ansible-sample/hello.txt
